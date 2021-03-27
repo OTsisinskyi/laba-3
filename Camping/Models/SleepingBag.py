@@ -3,8 +3,8 @@ from Models import enum_filler
 
 
 class SleepingBag(CampingItem):
-    def __init__(self, name: str, weight_in_grams: int, price: int, filler: enum_filler.Filler):
-        super().__init__(name, weight_in_grams, price)
+    def __init__(self, name: str, producer: str, weight_in_grams: int, price: int, filler: enum_filler.Filler):
+        super().__init__(name, producer, weight_in_grams, price)
         self.__filler = filler
 
     @property

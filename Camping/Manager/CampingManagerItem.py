@@ -1,4 +1,5 @@
 from Models import enum_sort_order
+from Models import Camping
 
 
 class CampingManager(object):
@@ -13,6 +14,14 @@ class CampingManager(object):
             weight_list = sorted(self.items, key=lambda weight: weight.weight_in_grams, reverse=True)
             print(weight_list)
         return " "
+
+    def sort_by_producer(self, sort_order: enum_sort_order.SortOrder):
+        if sort_order == enum_sort_order.SortOrder.ASC:
+            producer_list = sorted(self.items, key=lambda producer: producer.producer, reverse=False)
+            print(producer_list)
+        else:
+            producer_list = sorted(self.items, key=lambda producer: producer.producer, reverse=True)
+            print(producer_list)
 
     def find_item(self, name):
         if [x for x in self.items if x.name == name]:
