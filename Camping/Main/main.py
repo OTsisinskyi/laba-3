@@ -27,10 +27,22 @@ def main():
     camping_item = [tent, sleeping_bag, food_set, back_pack, first_aid_fit, raincoat, thermal_clothing]
     list_result = CampingManager(camping_item)
 
-    print(list_result.find_item("Tent"))
-    print(list_result.sort_by_weight(enum_sort_order.SortOrder.DESC))
+    print(tent.__str__())
+    print(sleeping_bag.__str__())
+    print(food_set.__str__())
+    print(back_pack.__str__())
+    print(first_aid_fit.__str__())
+    print(raincoat.__str__())
+    print(thermal_clothing.__str__())
     print("")
-    print(list_result.sort_by_producer(enum_sort_order.SortOrder.ASC))
+    print("The product we were looking for:")
+    print(list_result.find_item(tent))
+    print("")
+    print("The goods are sorted by weight:")
+    print(list_result.sort_by_weight(True))
+    print("")
+    print("Sorted list of manufacturers:")
+    print(list_result.sort_by_producer(False))
 
 
 if __name__ == '__main__':

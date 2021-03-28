@@ -24,6 +24,5 @@ class CampingItem(object):
     def __repr__(self):
         return f"""Producer - {self._producer} | Name - {self.name} | Weight - {self.weight_in_grams} gram\n"""
 
-
     def __str__(self):
         return f"""Name: {self.name}|Producer: {self._producer}|Weight in grams: {self.weight_in_grams}| Price: {self.price} UAN|"""
