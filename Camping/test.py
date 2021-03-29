@@ -1,4 +1,5 @@
 import unittest
+
 from Models import *
 from Manager import *
 
@@ -43,3 +44,7 @@ class TestCampingManager(unittest.TestCase):
 
     def test_find_item(self):
         self.assertEqual(self.list_result.find_item(self.tent), self.tent)
+
+
+if __name__ == '__main__':
+    unittest.main()

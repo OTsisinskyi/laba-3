@@ -39,10 +39,10 @@ def main():
     print(list_result.find_item(tent))
     print("")
     print("The goods are sorted by weight:")
-    print(list_result.sort_by_weight(True))
+    print(list_result.sort_by_weight(False))
     print("")
     print("Sorted list of manufacturers:")
-    print(list_result.sort_by_producer(False))
+    print(list_result.sort_by_producer(True))
 
 
 if __name__ == '__main__':
